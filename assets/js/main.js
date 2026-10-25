@@ -93,7 +93,7 @@
   var MASCOT_LINES = [
     '欢迎来到木石客栈～',
     '我是小树，有事点我！',
-    '今天也要开心哦 🌸',
+    '今天也要开心哦 🐳',
     '找不到文件？点右上角放大镜',
     '深夜了，记得早点休息呀',
     '有缘自会相遇 ✨',
@@ -101,7 +101,7 @@
   function initMascot() {
     var img = $('#mascotImg');
     if (img) {
-      img.textContent = SITE.mascotImg ? '' : '🌸';
+      img.textContent = SITE.mascotImg ? '' : '🐳';
       if (SITE.mascotImg) img.innerHTML = '<img src="' + esc(SITE.mascotImg) + '" alt="' + esc(SITE.mascot) + '">';
     }
     var bubble = $('#mascotBubble');
