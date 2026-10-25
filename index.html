@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="木石客栈 —— 一个二次元风格的个人文件分享小站">
+<title>首页 · 木石客栈</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home" data-title="首页">
+
+<div class="bg-layer"></div>
+
+<!-- 口令门 -->
+<div class="gate" id="gate">
+  <div class="gate-card">
+    <div class="gate-mascot">🌸</div>
+    <div class="gate-title">欢迎来到 木石客栈</div>
+    <div class="gate-sub">这是个小院子，进来需要一句暗号</div>
+    <input class="gate-input" id="gateInput" type="password" placeholder="请输入进站口令" autocomplete="off">
+    <div class="gate-error" id="gateError"></div>
+    <button class="btn btn-primary btn-block" id="gateOpen">进入客栈</button>
+  </div>
+</div>
+
+<!-- 顶部导航 -->
+<header class="site-header">
+  <div class="container">
+    <nav class="nav">
+      <a class="brand" href="index.html"><span class="brand-mark">🌸</span>木石客栈</a>
+      <div class="nav-links">
+        <a class="nav-link active" href="index.html">首页</a>
+        <a class="nav-link" href="list.html">全部文件</a>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn" data-search-open title="搜索 (Ctrl+K)">🔍</button>
+        <button class="icon-btn" id="themeBtn" title="切换主题">☀️</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-main">
+          <span class="eyebrow">Personal File Station</span>
+          <h1 class="hero-title" id="siteName">木石<span class="grad">客栈</span></h1>
+          <p class="hero-sub" id="siteSub">一个二次元风格的个人文件小站，欢迎常来。</p>
+          <div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn btn-primary" href="list.html">📂 逛逛全部文件</a>
+            <button class="btn" data-search-open>🔍 搜索文件</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><h2 class="section-title">分类<span class="grad">导航</span></h2></div>
+      <div class="cat-grid" id="catGrid"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">最近<span class="grad">更新</span></h2>
+        <a class="link-btn" href="list.html">查看全部 →</a>
+      </div>
+      <div class="file-grid" id="recentGrid"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><h2 class="section-title">下载<span class="grad">榜</span></h2></div>
+      <div id="rankGrid"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container" style="text-align:center">
+    <div id="footName">木石客栈</div>
+    <div id="footNote">木石客栈 · 欢迎常来</div>
+    <div style="margin-top:6px">© <span id="year">2026</span> · 有缘自会相遇</div>
+  </div>
+</footer>
+
+<!-- 看板娘 -->
+<div class="mascot" id="mascot">
+  <div class="mascot-bubble" id="mascotBubble">欢迎～</div>
+  <div class="mascot-img" id="mascotImg">🌸</div>
+</div>
+
+<!-- 搜索面板 -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-panel">
+    <div class="search-row">
+      <span>🔍</span>
+      <input class="search-input" id="searchInput" placeholder="搜索文件、标签、描述…" autocomplete="off">
+      <button class="link-btn" id="searchClose">Esc</button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
