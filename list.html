@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>全部文件 · 木石客栈</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="list" data-title="全部文件">
+
+<div class="bg-layer"></div>
+
+<div class="gate" id="gate">
+  <div class="gate-card">
+    <div class="gate-mascot">🌸</div>
+    <div class="gate-title">欢迎来到 木石客栈</div>
+    <div class="gate-sub">进来需要一句暗号</div>
+    <input class="gate-input" id="gateInput" type="password" placeholder="请输入进站口令" autocomplete="off">
+    <div class="gate-error" id="gateError"></div>
+    <button class="btn btn-primary btn-block" id="gateOpen">进入客栈</button>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav">
+      <a class="brand" href="index.html"><span class="brand-mark">🌸</span>木石客栈</a>
+      <div class="nav-links">
+        <a class="nav-link" href="index.html">首页</a>
+        <a class="nav-link active" href="list.html">全部文件</a>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn" data-search-open title="搜索 (Ctrl+K)">🔍</button>
+        <button class="icon-btn" id="themeBtn" title="切换主题">☀️</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title" id="listTitle">📂 全部文件</h2>
+        <p style="color:var(--text-dim);margin-top:6px" id="listSub">所有分类的文件</p>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px" id="filterBar"></div>
+    <div class="file-grid" id="listGrid"></div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container" style="text-align:center">
+    <div id="footName">木石客栈</div>
+    <div id="footNote">木石客栈 · 欢迎常来</div>
+    <div style="margin-top:6px">© <span id="year">2026</span></div>
+  </div>
+</footer>
+
+<div class="mascot" id="mascot">
+  <div class="mascot-bubble" id="mascotBubble">欢迎～</div>
+  <div class="mascot-img" id="mascotImg">🌸</div>
+</div>
+
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-panel">
+    <div class="search-row">
+      <span>🔍</span>
+      <input class="search-input" id="searchInput" placeholder="搜索文件、标签、描述…" autocomplete="off">
+      <button class="link-btn" id="searchClose">Esc</button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
